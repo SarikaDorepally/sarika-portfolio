@@ -5,83 +5,316 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sarika Dorepally | AI & Software Developer</title>
+<title>Sarika Dorepally | AI Engineer Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+*{
     margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7fa;
-    color:#333;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.7;
 }
 
 header{
-    background:#0f172a;
+
+    background:linear-gradient(135deg,#0f172a,#1d4ed8);
     color:white;
+    padding:80px 20px;
     text-align:center;
-    padding:60px 20px;
+
+}
+
+.profile{
+
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    border:6px solid white;
+    object-fit:cover;
+    margin-bottom:25px;
+    box-shadow:0px 10px 30px rgba(0,0,0,.3);
+
 }
 
 header h1{
-    font-size:45px;
-    margin:0;
+
+    font-size:48px;
+    margin-bottom:10px;
+
 }
 
-header p{
-    font-size:20px;
-    color:#cbd5e1;
+header h3{
+
+    font-weight:400;
+    color:#dbeafe;
+    margin-bottom:20px;
+
 }
 
-.button{
+.typing{
+
+    font-size:22px;
+    color:#93c5fd;
+    margin-bottom:30px;
+
+}
+
+.buttons{
+
+    margin-top:25px;
+
+}
+
+.btn{
+
     display:inline-block;
+    padding:14px 28px;
     margin:10px;
-    padding:12px 25px;
-    background:#2563eb;
+    background:white;
+    color:#1d4ed8;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+    background:#dbeafe;
+
+}
+
+nav{
+
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:100;
+
+}
+
+nav ul{
+
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    flex-wrap:wrap;
+
+}
+
+nav li{
+
+    margin:15px;
+
+}
+
+nav a{
+
     color:white;
     text-decoration:none;
-    border-radius:5px;
+    font-weight:500;
+
+}
+
+nav a:hover{
+
+    color:#60a5fa;
+
 }
 
 section{
-    width:90%;
+
     max-width:1100px;
     margin:auto;
-    padding:40px 0;
+    padding:80px 20px;
+
 }
 
-h2{
+.section-title{
+
     text-align:center;
-    color:#0f172a;
+    font-size:34px;
+    margin-bottom:40px;
+    color:#1d4ed8;
+
 }
 
 .card{
+
     background:white;
-    padding:20px;
-    margin:20px 0;
-    border-radius:10px;
-    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+    border-radius:15px;
+    padding:30px;
+    margin:25px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.about{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+
+}
+
+.about img{
+
+    width:100%;
+    border-radius:15px;
+
+}
+
+.skills{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+
 }
 
 .skills span{
-    display:inline-block;
+
     background:#2563eb;
     color:white;
-    padding:10px 18px;
-    margin:5px;
-    border-radius:20px;
+    padding:12px 20px;
+    border-radius:40px;
+    font-size:15px;
+
+}
+
+.grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+
+}
+
+.project{
+
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+.project:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.project h3{
+
+    color:#1d4ed8;
+    margin-bottom:15px;
+
+}
+
+.project p{
+
+    margin-bottom:15px;
+
+}
+
+.project a{
+
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:600;
+
+}
+
+.timeline{
+
+    border-left:4px solid #2563eb;
+    padding-left:25px;
+
+}
+
+.timeline-item{
+
+    margin-bottom:35px;
+
+}
+
+.timeline-item h3{
+
+    color:#2563eb;
+
+}
+
+.contact{
+
+    text-align:center;
+
+}
+
+.contact a{
+
+    display:block;
+    margin:12px;
+    color:#2563eb;
+    text-decoration:none;
+    font-size:18px;
+
 }
 
 footer{
+
     background:#0f172a;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:30px;
+
 }
 
-a{
-    color:#2563eb;
-    text-decoration:none;
+@media(max-width:768px){
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+header h1{
+
+font-size:35px;
+
+}
+
+.typing{
+
+font-size:18px;
+
+}
+
 }
 
 </style>
@@ -92,214 +325,145 @@ a{
 
 <header>
 
-<h1>Hi, I'm Sarika Dorepally 👋</h1>
+<img src="profile.jpg" class="profile" alt="Sarika">
 
-<p>
-Final-Year Computer Science Engineering Student
+<h1>Sarika Dorepally</h1>
+
+<h3>B.Tech Computer Science (AI & ML)</h3>
+
+<p class="typing">
+
+AI Engineer • LLM Developer • Full Stack Developer • ML Enthusiast
+
 </p>
 
-<p>
-AI • Machine Learning • Full Stack Development • Data Analytics
-</p>
+<div class="buttons">
 
-<a class="button" href="resume.pdf">Download Resume</a>
+<a class="btn" href="resume.pdf">📄 Download Resume</a>
 
-<a class="button"
-href="https://github.com/SarikaDorepally">
+<a class="btn" href="https://github.com/SarikaDorepally">
+
 GitHub
+
 </a>
+
+<a class="btn" href="YOUR_LINKEDIN_LINK">
+
+LinkedIn
+
+</a>
+
+</div>
 
 </header>
 
-<section>
+<nav>
 
-<h2>About Me</h2>
+<ul>
 
-<div class="card">
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#certifications">Certifications</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section id="about">
+
+<h2 class="section-title">
+
+About Me
+
+</h2>
+
+<div class="card about">
+
+<div>
 
 <p>
 
-I'm a passionate Computer Science Engineering student interested in Artificial Intelligence, Machine Learning, Data Analytics, and Full Stack Development.
+Hello! I'm <strong>Sarika Dorepally</strong>, a passionate B.Tech Computer Science (AI & ML) student with hands-on experience building intelligent applications using Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Prompt Engineering, AI Agents, and Full Stack Development.
 
-I enjoy solving real-world problems using AI-powered applications and continuously explore modern technologies to build impactful software.
+</p>
+
+<br>
+
+<p>
+
+I enjoy transforming complex ideas into practical software solutions. My interests include Artificial Intelligence, Machine Learning, Generative AI, Data Analytics, and scalable web applications. I continuously explore new technologies and build projects that solve real-world problems through automation and intelligent systems.
+
+</p>
+
+<br>
+
+<p>
+
+Currently seeking opportunities as an <strong>AI Engineer, Machine Learning Engineer, Generative AI Developer, or Full Stack Developer.</strong>
 
 </p>
 
 </div>
 
+<div>
+
+<img src="profile.jpg" alt="Sarika">
+
+</div>
+
+</div>
+
 </section>
 
-<section>
+<section id="skills">
 
-<h2>Technical Skills</h2>
+<h2 class="section-title">
+
+Technical Skills
+
+</h2>
+
+<div class="card">
 
 <div class="skills">
 
 <span>Python</span>
 <span>Java</span>
 <span>C</span>
-<span>SQL</span>
+<span>C++</span>
+<span>JavaScript</span>
 <span>HTML</span>
 <span>CSS</span>
-<span>JavaScript</span>
-<span>React</span>
+<span>React.js</span>
 <span>Node.js</span>
-<span>Express</span>
+<span>Express.js</span>
 <span>MongoDB</span>
+<span>SQL</span>
 <span>Git</span>
+<span>GitHub</span>
+<span>Docker</span>
+<span>AWS EC2</span>
+<span>Jenkins</span>
 <span>Machine Learning</span>
-<span>Data Analytics</span>
+<span>Deep Learning</span>
+<span>LLMs</span>
+<span>Prompt Engineering</span>
+<span>Google Gemini</span>
+<span>LangChain</span>
+<span>FAISS</span>
+<span>RAG</span>
+<span>REST APIs</span>
+
+</div>
 
 </div>
 
 </section>
-
-<section>
-
-<h2>Featured Projects</h2>
-
-<div class="card">
-
-<h3>ATS Resume Analyzer Pro</h3>
-
-<p>
-
-An AI-powered web application that compares resumes with job descriptions, calculates ATS compatibility scores, identifies missing skills, and suggests improvements for better job opportunities.
-
-</p>
-
-<p>
-
-<b>Technologies:</b>
-
-React, Node.js, Express, AI APIs
-
-</p>
-
-<p>
-
-<a href="https://ats-resume-analyzer-pro.vercel.app">
-
-🌐 Live Demo
-
-</a>
-
-|
-
-<a href="https://github.com/SarikaDorepally/ats-resume-analyzer-pro">
-
-💻 GitHub
-
-</a>
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>SmartDocQ</h3>
-
-<p>
-
-An AI-powered document question-answering system that lets users upload PDFs and ask questions using Retrieval-Augmented Generation (RAG).
-
-</p>
-
-<p>
-
-<b>Technologies:</b>
-
-React, FastAPI, Gemini API, ChromaDB
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>AI Interviewer</h3>
-
-<p>
-
-A virtual AI interviewer that asks technical questions, evaluates responses, and provides instant interview feedback.
-
-</p>
-
-<p>
-
-<b>Technologies:</b>
-
-Python, Streamlit, Gemini API
-
-</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Achievements</h2>
-
-<div class="card">
-
-<ul>
-
-<li>Built multiple AI-powered web applications.</li>
-
-<li>Experienced in Machine Learning and Data Analytics projects.</li>
-
-<li>Actively seeking AI Engineer and Software Development internships.</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Contact</h2>
-
-<div class="card">
-
-<p>Email : your_email@gmail.com</p>
-
-<p>
-
-GitHub :
-
-<a href="https://github.com/SarikaDorepally">
-
-github.com/SarikaDorepally
-
-</a>
-
-</p>
-
-<p>
-
-LinkedIn :
-
-<a href="#">
-
-Add Your LinkedIn Link
-
-</a>
-
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Sarika Dorepally
-
-</footer>
-
-</body>
-
-</html>
